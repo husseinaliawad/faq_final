@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - FAQ App</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            padding: 20px 0;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Links Section */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .links a {
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .links a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Students List */
+        .students-list {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .students-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .students-list li {
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+        }
+        .students-list li strong {
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        footer a {
+            text-decoration: none;
+            color: #777;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to the FAQ App</h1>
+            <p>Manage and search FAQs with ease. Get started by navigating below.</p>
+        </header>
+
+        <!-- Main Navigation Links -->
+        <div class="links">
+            <a href="{% url 'add' %}">Add a Question</a>
+            <a href="{% url 'search' %}">Search Questions</a>
+        </div>
+
+        <!-- Students List Section -->
+        <div class="students-list">
+            <h2>Students</h2>
+            <ul>
+                <li><strong>Mohamad</strong> (ID: 151722)</li>
+                <li><strong>firas</strong> (ID: 174871)</li>
+                <li><strong>Elias </strong> (ID: 133702)</li>
+                <li><strong>suhad </strong> (ID: 149943)</li>
+            </ul>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            &copy; 2024 FAQ App | Built with <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+        </footer>
+    </div>
+
+</body>
+</html>
